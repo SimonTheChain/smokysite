@@ -1,0 +1,35 @@
+/* Author: Simon Lachaîne */
+
+body{
+    background: aliceblue;
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.nav-pills{
+    padding-top: 5px;
+}
+
+.nav-pills>li>a{
+    color: skyblue;
+    font-size: 10pt;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-pills>li>a:focus,
+.nav-pills>li>a:hover{
+    color: darkblue;
+    background-color: skyblue;
+}
+
+.well{
+    border-radius: 25px;
+}
+
+.well>a{
+    color: black;
+}
