@@ -23,11 +23,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -53,14 +48,14 @@
 
             <!-- Header buttons -->
             <ul class="nav nav-pills">
-                <li><a href="#" id="menu-toggle">
+
+                <li ><a href="#" id="menu-toggle">
                     <span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
 
                 <li><a href="{% url 'home:index' %}">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
                 </li>
             </ul>
-
         </div>
 
         <!-- Navbar Items -->
@@ -95,42 +90,42 @@
     <!--Sidebar-->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <div class="dropdown">
+            <li class="dropdown">
                 <li><a data-toggle="collapse" href="#collapse-news"><strong>Latest News</strong>
                 <span class="caret"></span></a>
                 </li>
-                <div id="collapse-news" class="collapse">
+                <li id="collapse-news" class="collapse">
                     <ul class="sidebar-nav">
                         <li><a href="#">News 1</a></li>
                         <li><a href="#">News 2</a></li>
                         <li><a href="#">News 3</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="dropdown">
+                </li>
+            </li>
+            <li class="dropdown">
                 <li><a data-toggle="collapse" href="#collapse-programs"><strong>Programs</strong>
                 <span class="caret"></span></a>
                 </li>
-                <div id="collapse-programs" class="collapse">
+                <li id="collapse-programs" class="collapse">
                     <ul class="sidebar-nav">
                         <li><a href="#">Lorentz Calculator</a></li>
                         <li><a href="#">Blackjack</a></li>
                         <li><a href="#">President</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="dropdown">
+                </li>
+            </li>
+            <li class="dropdown">
                 <li><a data-toggle="collapse" href="#collapse-recipes"><strong>Programming Recipes</strong>
                 <span class="caret"></span></a>
                 </li>
-                <div id="collapse-recipes" class="collapse">
+                <li id="collapse-recipes" class="collapse">
                     <ul class="sidebar-nav">
                         <li><a href="#">Python</a></li>
                         <li><a href="#">Javascript</a></li>
                         <li><a href="#">Bootstrap</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+            </li>
             <li><a href="#"><strong>References</strong></a></li>
             <li><a href="#"><strong>About</strong></a></li>
             <li><a href="#"><strong>Contact</strong></a></li>
@@ -147,6 +142,9 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     $("#menu-toggle").click( function (e) {
        e.preventDefault();

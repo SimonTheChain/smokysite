@@ -1,5 +1,13 @@
 /* Author: Simon Lachaîne */
 
+#well-link{
+    background: gold
+}
+
+#well-link:hover{
+    background: palegoldenrod;
+}
+
 body{
     background: aliceblue;
     padding-top: 50px;
@@ -33,4 +41,8 @@ body{
 .well>a{
     text-decoration: none;
     color: black;
+}
+
+.well:hover{
+    background: lightgoldenrodyellow;
 }
