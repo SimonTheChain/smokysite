@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Author: Simon Lachaîne -->
+    <meta charset="UTF-8" />
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cv/style.css' %}"/>
+    <title>Simon Lachaîne - CV</title>
+</head>
+
+{% block body %}
+
+<!-- Flexbox containers -->
+<div id="flex-container">
+
+    <div id="flex-container-main">
+
+        <div id="flex-container-header-section">
+            <!-- Header -->
+            <header>
+                <h1>Simon Lachaîne</h1>
+                <h3>Programmeur Python</h3>
+            </header>
+
+            <div id="flex-container-section">
+                <!-- Section Expérience -->
+                <section>
+                    <h2>Mon expérience</h2>
+                    <ul>
+                        <li>Technicolor Services Créatifs: <strong>Programmeur de métadonnées</strong> (2015-présent)
+                            <ul class="sublist">
+                                <li>Développement d'<em>outils logiciels</em> pour accélérer la production et réduire le risque d'erreur</li>
+                                <li>Préparation des métadonnées en format <em>XML</em> selon les spécifications des différentes plateformes</li>
+                            </ul>
+                        </li>
+                        <li>Technicolor Services Créatifs: <strong>Gestionnaire de données</strong> (2014-2015)</li>
+                        <li>Technicolor Services Créatifs: <strong>Technicien contrôle qualité DVD/BD</strong> (2010-2014)</li>
+                    </ul>
+                </section>
+
+                <!-- Section Compétences -->
+                <section>
+                    <h2>Mes compétences</h2>
+                    <ul>
+                        <li>Connaissance approfondie de <strong>Python</strong>
+                            <ul>
+                                <li class="sublist">Développement de plusieurs applications desktop avec <em>PyQt</em></li>
+                                <li class="sublist">Développement de quelques projets web avec <em>Django</em></li>
+                                <li class="sublist">Développement d'un projet d'analyse de données avec <em>Pandas</em> et <em>Matplotlib</em></li>
+                            </ul>
+                        </li>
+                        <li>Connaissance fonctionnelle de <strong>HTML5</strong> et <strong>CSS3</strong></li>
+                        <li>Connaissances de base en <strong>Javascript</strong></li>
+                        <li>Connaissances de base en <strong>PHP</strong></li>
+                    </ul>
+                </section>
+
+                <!-- Section Formation -->
+                <section>
+                    <h2>Ma formation</h2>
+                    <ul>
+                        <li><a href="https://www.coursera.org" target="_blank">Coursera</a>: An Introduction to Interactive Programming in Python</li>
+                        <li><a href="https://www.pluralsight.com" target="_blank">Pluralsight</a>: Python Desktop Application Development</li>
+                        <li><a href="https://openclassrooms.com" target="_blank">OpenClassrooms</a>: Apprenez à créer votre site web avec HTML5 et CSS3</li>
+                        <li><a href="https://openclassrooms.com" target="_blank">OpenClassrooms</a>: Apprenez à coder avec JavaScript (en cours)</li>
+                        <li><a href="https://stackskills.com" target="_blank">StackSkills</a>: The Full Stack Web Development (en cours)</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <h4>Page créée en 2017 par Simon Lachaîne</h4>
+        </footer>
+
+    </div>
+
+    <!-- Aside Left -->
+    <aside>
+        <a href="{% static 'cv/images/simon.jpg' %}">
+            <img src="{% static 'cv/images/simon_mini.jpg' %}" alt="Photo de Simon Lachaîne" title="Simon Lachaîne" id="photo"/>
+        </a>
+
+        <address>
+            <h4>Contact:</h4>
+            <p>webmaster@example.com</p>
+            <p>Laval, Québec, Canada</p>
+        </address>
+    </aside>
+
+</div>
+
+{% endblock %}
+</html>

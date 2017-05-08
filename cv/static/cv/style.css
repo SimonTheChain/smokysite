@@ -1,0 +1,231 @@
+/* Author: Simon Lachaîne */
+
+/* Fonts */
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('fonts/Sansation-Regular-webfont.eot');
+    src: url('fonts/Sansation-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Sansation-Regular-webfont.woff') format('woff'),
+         url('fonts/Sansation-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Sansation-Regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-image: url("images/asanoha.png");
+    font-family: open_sansregular, Arial, sans-serif;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'sansationregular', Arial, sans-serif;
+}
+
+/* Layout */
+html, body, #flex-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#flex-container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 2;
+}
+
+#flex-container-header-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#flex-container-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    border: 3px #6E230E solid;
+    border-radius: 12px;
+    box-shadow: 3px 3px 12px grey;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+aside {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 0 3px black;
+    order: 1;
+}
+
+aside address {
+    font-style: normal;
+    align-self: center;
+    text-align: left;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    order: 3;
+}
+
+footer h4 {
+    align-self: flex-end;
+}
+
+/* Full Desktop */
+@media only screen and (min-width: 1024px){
+    #flex-container {
+        flex-direction: row;
+    }
+    aside {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        box-shadow: 0 3px 3px black;
+    }
+    aside address {
+        text-align: center;
+        word-wrap: break-word;
+    }
+    aside > a {
+        align-self: center;
+    }
+    section {
+        width: 25%;
+        max-height: none
+    }
+    footer {
+        min-height: 25%;
+    }
+}
+
+/* Formatting */
+#photo {
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px black;
+    padding: 10px;
+}
+
+h1 {
+    color: #6E230E;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #6E230E;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+strong {
+    color: #530E6E;
+    font-family: 'sansationregular', Arial, sans-serif;
+    font-weight: bold;
+}
+
+em {
+    color: #530E6E;
+    font-family: 'sansationregular', Arial, sans-serif;
+}
+
+.sublist {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: #0E596E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: grey;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6E230E;
+}
+
+a:active {
+    color: #530E6E;
+}
+
+/* Animation */
+@keyframes show_box_shade {
+    0% {box-shadow: 3px 3px 12px grey;}
+    100% {box-shadow: 3px 3px 12px black;}
+}
+
+section:hover {
+    animation-name: show_box_shade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show_text_shade {
+    0% {text-shadow: none;}
+    100% {text-shadow: 1px 1px 3px grey;}
+}
+
+section:hover strong, section:hover em, section:hover a {
+    animation-name: show_text_shade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
