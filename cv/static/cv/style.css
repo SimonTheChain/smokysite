@@ -85,10 +85,9 @@ section {
 aside {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     background-color: black;
     color: white;
     box-shadow: 3px 0 3px black;
@@ -97,8 +96,12 @@ aside {
 
 aside address {
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-self: center;
     text-align: left;
+    padding: 20px;
 }
 
 footer {
@@ -110,6 +113,10 @@ footer {
 
 footer h4 {
     align-self: flex-end;
+}
+
+#photo {
+    display: none;
 }
 
 /* Full Desktop */
@@ -124,6 +131,9 @@ footer h4 {
         justify-content: flex-start;
         align-content: center;
         box-shadow: 0 3px 3px black;
+    }
+    #photo {
+        display: block;
     }
     aside address {
         text-align: center;
@@ -145,7 +155,7 @@ footer h4 {
 #photo {
     border-radius: 50%;
     box-shadow: 3px 3px 6px black;
-    padding: 10px;
+    margin: 25px;
 }
 
 h1 {
@@ -159,6 +169,10 @@ h2 {
     color: #6E230E;
     font-size: 1.5em;
     text-align: center;
+}
+
+aside address h4 {
+    te
 }
 
 ul {
@@ -196,7 +210,6 @@ a {
 
 a:visited {
     color: grey;
-    text-decoration: underline;
 }
 
 a:hover {
@@ -205,6 +218,10 @@ a:hover {
 
 a:active {
     color: #530E6E;
+}
+
+aside a, aside a:hover, aside a:active, aside a:visited {
+    color: white;
 }
 
 /* Animation */
