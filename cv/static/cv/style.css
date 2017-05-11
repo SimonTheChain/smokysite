@@ -26,50 +26,36 @@
 
 body {
     background-image: url("images/asanoha.png");
-    font-family: open_sansregular, Arial, sans-serif;
-    font-size: 100%;
+    font-family: 'open_sansregular', Arial, sans-serif;
+    font-size: 1em;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, strong, em {
     font-family: 'sansationregular', Arial, sans-serif;
 }
 
 /* Layout */
-html, body, #flex-container {
+html, body, .flex-container {
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
 }
 
-#flex-container {
+.flex-container {
     display: flex;
     flex-direction: column;
 }
 
-#flex-container-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    order: 2;
-}
-
-#flex-container-header-section {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: space-around;
-}
-
-#flex-container-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+.main {
+    flex: 1 1 auto;
+    overflow-y: auto;
 }
 
 header {
+    flex: 0 0 auto;
     text-align: center;
+    box-shadow: 0 3px 6px black;
 }
 
 section {
@@ -78,78 +64,26 @@ section {
     box-shadow: 3px 3px 12px grey;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 15px;
     overflow: auto;
 }
 
 aside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     background-color: black;
     color: white;
     box-shadow: 3px 0 3px black;
-    order: 1;
+    text-align: center;
 }
 
 aside address {
     font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    text-align: left;
+    text-align: center;
     padding: 20px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    order: 3;
-}
-
-footer h4 {
-    align-self: flex-end;
-}
-
-#photo {
-    display: none;
-}
-
-/* Full Desktop */
-@media only screen and (min-width: 1024px){
-    #flex-container {
-        flex-direction: row;
-    }
-    aside {
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
-        box-shadow: 0 3px 3px black;
-    }
-    #photo {
-        display: block;
-    }
-    aside address {
-        text-align: center;
-        word-wrap: break-word;
-    }
-    aside > a {
-        align-self: center;
-    }
-    section {
-        width: 25%;
-        max-height: none
-    }
-    footer {
-        min-height: 25%;
-    }
+    margin: 20px;
 }
 
 /* Formatting */
@@ -169,13 +103,21 @@ h1 {
 h2 {
     color: #6E230E;
     font-size: 1.5em;
-    text-align: center;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1em;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-left: 0;
 }
 
 li {
@@ -185,16 +127,14 @@ li {
 
 strong {
     color: #530E6E;
-    font-family: 'sansationregular', Arial, sans-serif;
     font-weight: bold;
 }
 
 em {
     color: #530E6E;
-    font-family: 'sansationregular', Arial, sans-serif;
 }
 
-.sublist {
+ul > li > ul > li {
     font-style: italic;
 }
 
@@ -219,6 +159,22 @@ a:active {
 
 aside a, aside a:hover, aside a:active, aside a:visited {
     color: white;
+    font-size: 1.2em;
+}
+
+/* Tablet Portrait */
+@media all and (min-width: 768px){
+    section h2 {
+        text-align: center;
+    }
+    ul {
+        padding-left: 2em;
+    }
+}
+
+/* Tablet Landscape */
+@media all and (min-width: 1024px){
+
 }
 
 /* Animation */
