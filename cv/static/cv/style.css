@@ -174,7 +174,25 @@ aside a, aside a:hover, aside a:active, aside a:visited {
 
 /* Tablet Landscape */
 @media all and (min-width: 1024px){
+    .main {
+        flex-direction: row;
+    }
+    aside {
+        flex: 0 0 auto;
+    }
+    .inner {
+        flex: 1 1 auto;
+        overflow-y: auto;
+    }
+}
 
+/* Laptops and Desktops */
+@media only screen and (min-width: 1280px){
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 /* Animation */
