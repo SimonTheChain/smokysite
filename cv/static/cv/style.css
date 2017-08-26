@@ -66,6 +66,22 @@ section {
     padding: 10px;
     margin: 15px;
     overflow: auto;
+    -webkit-transition: box-shadow 1s;
+    transition: box-shadow 1s;
+}
+
+section:hover {
+    box-shadow: 3px 3px 12px black;
+}
+
+section strong, section em, section a {
+    text-shadow: none;
+    -webkit-transition: text-shadow 1s;
+    transition: text-shadow 1s;
+}
+
+section:hover strong, section:hover em, section:hover a {
+    text-shadow: 1px 1px 3px grey;
 }
 
 aside {
@@ -197,27 +213,4 @@ aside a, aside a:hover, aside a:active, aside a:visited {
         flex-direction: row;
         justify-content: space-around;
     }
-}
-
-/* Animation */
-@keyframes show_box_shade {
-    0% {box-shadow: 3px 3px 12px grey;}
-    100% {box-shadow: 3px 3px 12px black;}
-}
-
-section:hover {
-    animation-name: show_box_shade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes show_text_shade {
-    0% {text-shadow: none;}
-    100% {text-shadow: 1px 1px 3px grey;}
-}
-
-section:hover strong, section:hover em, section:hover a {
-    animation-name: show_text_shade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
