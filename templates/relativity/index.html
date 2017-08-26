@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Author: Simon Lachaîne -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'relativity/style.css' %}"/>
+    <title>Simon Lachaîne - Special Relativity</title>
+</head>
+
+{% block body %}
+
+    <h1>Special Relativity</h1>
+    <h2>A Math-Based Introduction</h2>
+
+    <h3>Speed</h3>
+    <form action="{% url "relativity:index" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+        <p>The
+            <input type="submit" class="btn" name="speed_btn" value="Measure">
+            of
+            <label for="distance">Distance</label>
+            <input id="distance" type="number" name="distance" value="{% if distance %}{{ distance }}{% endif %}">
+            divided by
+            <label for="duration">Duration</label>
+            <input id="duration" type="number" name="duration" value="{% if duration %}{{ duration }}{% endif %}">
+            (Space over Time):
+            {% if speed %}
+                {{ speed }}
+            {% endif %}
+        </p>
+    </form>
+    <h4>Speed is always relative to something.</h4>
+    <p>If you are in <strong>Constant Velocity Motion</strong>,
+        you are totally justified to claim that you are still,
+        and that it is the world around you that moves by you.</p>
+    <h4>Speed is additive and subtractive.</h4>
+    <p>If you run away from an object coming toward you, it'll approach less quickly.</p>
+
+    <h3>The Speed of Light</h3>
+    <form action="{% url "relativity:index" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+        <p>The
+            <input type="submit" class="btn" name="speed_btn" value="Measure">
+            of
+            <label for="distance">Distance</label>
+            <input id="distance" type="number" name="distance" value="{% if distance %}{{ distance }}{% endif %}">
+            divided by
+            <label for="duration">Duration</label>
+            <input id="duration" type="number" name="duration" value="{% if duration %}{{ duration }}{% endif %}">
+            (Space over Time):
+            {% if speed %}
+                {{ speed }}
+            {% endif %}
+        </p>
+    </form>
+    <h4>The speed of light is constant.</h4>
+    <p>The speed of light (c) is 299,792,458 meters per second.</p>
+    <h4>Speed is additive and subtractive.</h4>
+    <p>If you run away from an object coming toward you, it'll approach less quickly.</p>
+
+{% endblock %}

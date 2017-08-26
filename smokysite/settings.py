@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # site
     'home',
     'cv',
+    "relativity",
 ]
 
 MIDDLEWARE = [

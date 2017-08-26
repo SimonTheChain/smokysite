@@ -1,0 +1,21 @@
+body {
+    background-color: lightyellow;
+}
+
+h4 {
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    color: darkblue;
+}
+
+label {
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    color: blue;
+}
+
+.btn {
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    color: crimson;
+}
