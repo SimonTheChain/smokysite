@@ -188,6 +188,10 @@ aside a, aside a:hover, aside a:active, aside a:visited {
 
 /* Laptops and Desktops */
 @media only screen and (min-width: 1280px){
+    .inner {
+        justify-content: space-around;
+    }
+
     article {
         display: flex;
         flex-direction: row;
