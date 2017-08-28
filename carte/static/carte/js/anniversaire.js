@@ -2,25 +2,19 @@
 
 $(function () {
     // define variables
-    var $static, $body, $title, $paragraphs;
-    $static = STATIC_URL;
+    var $body, $title, $paragraphs;
     $body = $("body");
-    $title = $(".well-lg");
-    $paragraphs = $(".well").not(".well-lg");
+    $title = $("h1");
+    $paragraphs = $("p");
 
     // hide paragraphs before showing everything
     $paragraphs.hide();
-    $body.css({
-        "display": "inline"
-    });
+    $body.addClass("show_body");
 
     // upon clicking the title, show the first paragraph
     $title.on("click", function (e) {
         e.preventDefault();
-        var $default_back = 'white url('+$static+'carte/images/asanoha.png)';
-        $body.css({
-            "background": $default_back
-        });
+        $body.removeClass("k_back").addClass("w_back");
         $paragraphs.first().slideDown();
     });
 
@@ -35,11 +29,7 @@ $(function () {
     $paragraphs.last().on("click", function (e) {
         e.preventDefault();
         $paragraphs.slideUp();
-        var $kitty_back = 'white url('+$static+'carte/images/kittens.jpg) no-repeat center';
-        $body.css({
-            "background": $kitty_back,
-            "background-size": "contain"
-        });
+        $body.removeClass("w_back").addClass("k_back");
         var audio = $("audio")[0];
         audio.play();
     });

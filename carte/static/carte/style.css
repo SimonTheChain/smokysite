@@ -76,3 +76,17 @@ article {
     background: lightgoldenrodyellow;
     cursor: pointer;
 }
+
+/* Custom classes */
+.w_back {
+    background: white url('images/asanoha.png');
+}
+
+.k_back {
+    background: white url("images/kittens.jpg") no-repeat center;
+    background-size: contain;
+}
+
+.show_body {
+    display: inline;
+}
