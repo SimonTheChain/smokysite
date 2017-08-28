@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Author: Simon Lachaîne -->
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Joyeux anniversaire!</title>
+
+    {% load staticfiles %}
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'carte/style.css' %}">
+
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <header>
+            <h1 class="well well-lg">Joyeux anniversaire!</h1>
+        </header>
+
+        <article>
+            <p class="well">Chère Maud,</p>
+
+            <p class="well">je sais que tu aimes les chats,</p>
+
+            <p class="well">alors voici de mignons chattons!</p>
+        </article>
+
+        <audio>
+            <source src="{% static 'carte/audio/cat.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
+    <!-- jQuery CDN -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <!-- Javascript source -->
+    <script language="javascript">var STATIC_URL = "{{ STATIC_URL|escapejs }}";</script>
+    <script type="text/javascript" src="{% static 'carte/js/anniversaire.js' %}"></script>
+
+</body>
+
+</html>
